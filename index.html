@@ -6,7 +6,40 @@
     <title>Vite + React</title>
   </head>
   <body>
-    <div id="root"></div>
+
+  <div class="category">
+    <img src="public/Rectangle%2017.png" alt="Принадлежности и расходные материалы" class="img category__img">
+    <div class="category__title">
+      <p class="text category__text">ПРИНАДЛЕЖНОСТИ И РАСХОДНЫЕ МАТЕРИАЛЫ</p>
+    </div>
+  </div>
+
+  <div class="product-assets">
+    <div class="product">
+<!--      выводится через иф твига-->
+      <div class="product__sale">
+        <p class="sale__icon-text">50%</p>
+      </div>
+      <img src="" alt="BR 113 LI Дрель-шуруповерт аккумуляторная" class="img product__img">
+      <p class="product__vendor-code">Артикул: 180301113</p>
+      <p class="product__title">BR 113 LI ДРЕЛЬ&mdash;ШУРУПОВЕРТ АККУМУЛЯТОРНАЯ</p>
+      <div class="product__buy-block">
+<!--        в твиге иф продукт с скидкой то выводим это-->
+        <p class="product__sale-price">
+          <p class="product__old-price"></p>
+          <p class="product__current-price"></p>
+        </p>
+<!--        иначе выводим вот это -->
+        <p class="product__price">
+
+        </p>
+
+
+      </div>
+    </div>
+
+  </div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
