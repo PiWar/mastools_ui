@@ -1,45 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite + React</title>
-  </head>
-  <body>
+</head>
+<body>
 
-  <div class="category">
+<div class="category">
     <img src="public/Rectangle%2017.png" alt="Принадлежности и расходные материалы" class="img category__img">
     <div class="category__title">
-      <p class="text category__text">ПРИНАДЛЕЖНОСТИ И РАСХОДНЫЕ МАТЕРИАЛЫ</p>
+        <p class="text category__text">ПРИНАДЛЕЖНОСТИ И РАСХОДНЫЕ МАТЕРИАЛЫ</p>
     </div>
-  </div>
+</div>
 
-  <div class="product-assets">
+
+<div class="product-assets">
     <div class="product">
-<!--      выводится через иф твига-->
-      <div class="product__sale">
-        <p class="sale__icon-text">50%</p>
-      </div>
-      <img src="" alt="BR 113 LI Дрель-шуруповерт аккумуляторная" class="img product__img">
-      <p class="product__vendor-code">Артикул: 180301113</p>
-      <p class="product__title">BR 113 LI ДРЕЛЬ&mdash;ШУРУПОВЕРТ АККУМУЛЯТОРНАЯ</p>
-      <div class="product__buy-block">
-<!--        в твиге иф продукт с скидкой то выводим это-->
-        <p class="product__sale-price">
-          <p class="product__old-price"></p>
-          <p class="product__current-price"></p>
-        </p>
-<!--        иначе выводим вот это -->
-        <p class="product__price">
-
-        </p>
-
-
-      </div>
+        <img src="public/Rectangle%2019.png" alt="BR 113 LI Дрель-шуруповерт аккумуляторная" class="img product__img">
+        <div class="product__desc">
+            <p class="product__vendor-code">Артикул: 180301113</p>
+            <p class="product__title">BR 113 LI ДРЕЛЬ&mdash;ШУРУПОВЕРТ АККУМУЛЯТОРНАЯ</p>
+            <div class="product__buy-block">
+                <p class="product__current-price">1 500 руб.</p>
+                <button class="product__btn btn">В КОРЗИНУ</button>
+            </div>
+        </div>
     </div>
+    <div class="product">
+        <!--      выводится через иф твига-->
+        <div class="product__sale">
+            <p class="sale__icon-text">50%</p>
+        </div>
+        <img src="public/Rectangle%2019.png" alt="BR 113 LI Дрель-шуруповерт аккумуляторная" class="img product__img">
+        <div class="product__desc">
+            <p class="product__vendor-code">Артикул: 180301113</p>
+            <p class="product__title">BR 113 LI ДРЕЛЬ&mdash;ШУРУПОВЕРТ АККУМУЛЯТОРНАЯ</p>
+            <div class="product__buy-block">
+                <!--        в твиге иф продукт с скидкой то выводим это-->
+                <div class="product__sale-price">
+                    <p class="product__old-price">3 000 руб.</p>
+                    <p class="product__current-price">1 500 руб.</p>
+                </div>
+                <!--        иначе выводим вот это -->
+                <!--            <p class="product__price">1 500 руб.</p>-->
+                <!---->
+                <button class="product__btn btn">В КОРЗИНУ</button>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="public/Rectangle%2019.png" alt="BR 113 LI Дрель-шуруповерт аккумуляторная" class="img product__img">
+        <div class="product__desc">
+            <p class="product__vendor-code">Артикул: 180301113</p>
+            <p class="product__title">BR 113 LI ДРЕЛЬ&mdash;ШУРУПОВЕРТ АККУМУЛЯТОРНАЯ</p>
+            <div class="product__rent-block">
+                <div class="product__rent">
+                    <p class="product__price">1 500 руб.</p>
+                    <p class="product__duration">В сутки</p>
+                </div>
+                <button class="product__btn-rent btn">ПОДРОБНЕЕ</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-  </div>
 
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<div class="product-cart">
+    <input type="checkbox" class="checkbox">
+    <img src="public/Rectangle%2019.png" alt="BR 113..." class="product-cart__img">
+    <div class="product-cart__desc">
+        <p class="product-cart__title">BR 113 LI Дрель&mdash;шуруповерт аккумуляторная</p>
+        <p class="product-cart__vendor-code">Артикул: 180301113</p>
+    </div>
+    <div class="product-cart__count-ctrl">
+        <div class="product-cart__minus">
+            <img src="public/minus.png" alt="уменьшить" class="product-cart__minus-img">
+        </div>
+        <div class="product-cart__count">1</div>
+        <div class="product-cart__plus">
+            <img src="public/plus.png" alt="добавить" class="product-cart__plus-img">
+        </div>
+    </div>
+    <div class="product-cart__price-del">
+        <p class="product-cart__price">15 000 руб.</p>
+        <button class="product-cart__del-btn">Удалить</button>
+    </div>
+</div>
+<script type="module" src="/src/main.jsx"></script>
+</body>
 </html>

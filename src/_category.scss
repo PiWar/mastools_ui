@@ -1,0 +1,15 @@
+@import "variables";
+@import "mixin";
+
+.category{
+  max-width: 305px;
+  text-align: center;
+  @include border;
+  &__title{
+    background: $gray-1;
+  }
+  &__text{
+    @include text-2l(true);
+    padding: 15px;
+  }
+}
