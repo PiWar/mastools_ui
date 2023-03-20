@@ -1,0 +1,94 @@
+@import "variables";
+@import "mixin";
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid $gray-3;
+  border-radius: 2px;
+}
+
+.product-cart {
+  display: flex;
+  justify-content: space-between;
+  @include border;
+  padding: 20px;
+  max-width: 800px;
+
+  &__check {
+    display: flex;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  &__img {
+    object-fit: cover;
+    max-width: 100px;
+  }
+
+  &__title {
+    @include text-2m(false);
+  }
+
+  &__vendor-code {
+    @include text-2m(false);
+    color: $gray-3;
+  }
+
+  &__count-ctrl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    max-height: 22px;
+    @include text-2l(false);
+  }
+
+  &__minus, &__plus {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__minus-img, &__plus-img {
+    max-height: 12px;
+    max-width: 12px;
+  }
+
+  &__price-del, &__price-sale {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__price {
+    @include heading-3(true);
+
+    &-old {
+      @include text-2l(false);
+      text-decoration: line-through;
+    }
+
+    &-current {
+      @include heading-3(true);
+      color: $red-1;
+    }
+  }
+
+  &__del-btn {
+    border: none;
+    background: #fff;
+    color: $gray-3;
+    @include text-2m(false);
+
+    &:hover {
+      color: $red-1;
+    }
+  }
+
+}

@@ -6,7 +6,7 @@
   column-gap: 25px;
 }
 
-.btn{
+.btn {
   height: 40px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -18,7 +18,7 @@
   max-width: 305px;
 
   &__sale {
-  position: absolute;
+    position: absolute;
   }
 
   &__desc {
@@ -42,35 +42,52 @@
     justify-content: space-between;
   }
 
-  &__sale-price, &__rent{
+  &__sale-price, &__rent {
     display: flex;
     flex-direction: column;
-    .product__current-price{
+
+    .product__current-price {
       color: $red-1;
     }
   }
 
-  &__old-price{
+  &__old-price {
     @include text-2l(false);
     color: $gray-3;
     text-decoration: line-through;
   }
 
-  &__current-price{
+  &__price{
     @include text-1;
   }
 
-  &__btn{
+  &__current-price {
+    @include text-1;
+  }
+
+  &__duration {
+    @include text-2l(false);
+  }
+
+  &__btn {
     border: 1px solid $red-1;
     color: $red-1;
-    @include text-2m(true)
+    transition: background-color .2s ease;
+    @include text-2m(true);
+
+    &:hover {
+      background: $red-4;
+    }
   }
 
-  &__btn-rent{
+  &__btn-rent {
     border: 1px solid $blue-1;
     color: $blue-1;
-    @include text-2m(true)
+    transition: background-color .2s ease;
+    @include text-2m(true);
+
+    &:hover {
+      background: $blue-3;
+    }
   }
-
-
 }
