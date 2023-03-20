@@ -1,0 +1,30 @@
+@import "variables";
+@import "mixin";
+
+.review{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  max-width: 305px;
+  @include border;
+  padding: 20px;
+
+
+  &__user-rating{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__username{
+    @include text-2l(true);
+  }
+
+  &__rating{
+    display: flex;
+    column-gap: 5px;
+  }
+
+  &__message{
+    @include text-2l(false);
+  }
+}

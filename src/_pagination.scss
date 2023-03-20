@@ -1,0 +1,47 @@
+@import "variables";
+@import "mixin";
+
+.pagination {
+  display: flex;
+  column-gap: 44px;
+  max-width: 300px;
+  @include text-2m(false);
+
+  &__btn-back, &__btn-next {
+
+  }
+
+  &__img-back, &__img-next {
+
+  }
+
+  &__pages {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__pages .page {
+    cursor: pointer;
+
+    &:hover {
+      color: $red-1;
+    }
+  }
+}
+
+.first {
+  color: $red-1;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    left: -5px;
+    bottom: -5px;
+    border-radius: 5px;
+    border: none;
+    background: $red-1;
+  }
+}
