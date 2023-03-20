@@ -1,0 +1,66 @@
+@import "variables";
+@import "mixin";
+
+.price-ctrl {
+  display: flex;
+  max-width: 487px;
+  column-gap: 54px;
+  align-items: center;
+
+  &__discount {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__sale &__current {
+    color: $red-1;
+  }
+
+  &__current {
+    @include heading-2;
+  }
+
+  &__old {
+    @include heading-3(false);
+    text-decoration: line-through;
+  }
+
+  &__indicator {
+    background: $red-1;
+    border-radius: 5px;
+    padding: 0 5px;
+    @include text-2m(false);
+    color: #fff;
+    max-height: 20px;
+  }
+
+  &__duration {
+    @include text-1;
+  }
+
+  &__btn {
+    background: $red-1;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 40px;
+    border: none;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: $red-2;
+    }
+
+    &-rent {
+      background: #fff;
+      border: 1px solid $blue-1;
+      color: $blue-1;
+      border-radius: 5px;
+      padding: 10px 40px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: $blue-3;
+      }
+    }
+  }
+}

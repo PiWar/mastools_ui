@@ -8,6 +8,7 @@
 @mixin heading-2 {
   font-size: 26px;
   line-height: 34px;
+  font-weight: 700;
 }
 
 @mixin heading-3($isBold) {
